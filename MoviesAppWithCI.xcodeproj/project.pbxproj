@@ -10,12 +10,31 @@
 		980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */; };
 		DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C0275C637500E5ADBB /* AppDelegate.swift */; };
 		DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C2275C637500E5ADBB /* SceneDelegate.swift */; };
-		DBA865C5275C637600E5ADBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C4275C637500E5ADBB /* ViewController.swift */; };
+		DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C4275C637500E5ADBB /* TabBarController.swift */; };
 		DBA865CB275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C9275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld */; };
 		DBA865CD275C637700E5ADBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA865CC275C637700E5ADBB /* Assets.xcassets */; };
 		DBA865D0275C637700E5ADBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA865CE275C637700E5ADBB /* LaunchScreen.storyboard */; };
 		DBA86634275CB80E00E5ADBB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DBA86633275CB80E00E5ADBB /* .swiftlint.yml */; };
+		DBA866CB275CF29B00E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA866CA275CF29B00E5ADBB /* Home.framework */; };
+		DBA866CC275CF29B00E5ADBB /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA866CA275CF29B00E5ADBB /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBA86709275D131D00E5ADBB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86708275D131D00E5ADBB /* Core.framework */; };
+		DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86708275D131D00E5ADBB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBA866CD275CF29B00E5ADBB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBA866CC275CF29B00E5ADBB /* Home.framework in Embed Frameworks */,
+				DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppWithCI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,12 +43,14 @@
 		DBA865BD275C637500E5ADBB /* MoviesAppWithCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesAppWithCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA865C0275C637500E5ADBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA865C2275C637500E5ADBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBA865C4275C637500E5ADBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBA865C4275C637500E5ADBB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DBA865CA275C637600E5ADBB /* MoviesAppWithCI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesAppWithCI.xcdatamodel; sourceTree = "<group>"; };
 		DBA865CC275C637700E5ADBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA865CF275C637700E5ADBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA865D1275C637700E5ADBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA86633275CB80E00E5ADBB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		DBA866CA275CF29B00E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA86708275D131D00E5ADBB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */,
+				DBA86709275D131D00E5ADBB /* Core.framework in Frameworks */,
+				DBA866CB275CF29B00E5ADBB /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +70,8 @@
 		C63369C2473289B6C7C0ACC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBA86708275D131D00E5ADBB /* Core.framework */,
+				DBA866CA275CF29B00E5ADBB /* Home.framework */,
 				03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */,
 			);
 			name = Frameworks;
@@ -76,7 +101,7 @@
 			children = (
 				DBA865C0275C637500E5ADBB /* AppDelegate.swift */,
 				DBA865C2275C637500E5ADBB /* SceneDelegate.swift */,
-				DBA865C4275C637500E5ADBB /* ViewController.swift */,
+				DBA865C4275C637500E5ADBB /* TabBarController.swift */,
 				DBA865CC275C637700E5ADBB /* Assets.xcassets */,
 				DBA865CE275C637700E5ADBB /* LaunchScreen.storyboard */,
 				DBA865D1275C637700E5ADBB /* Info.plist */,
@@ -107,6 +132,7 @@
 				DBA865BB275C637500E5ADBB /* Resources */,
 				DBA86632275CB76B00E5ADBB /* SwiftLint */,
 				FA759872324F8B256C100806 /* [CP] Embed Pods Frameworks */,
+				DBA866CD275CF29B00E5ADBB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA865CB275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld in Sources */,
-				DBA865C5275C637600E5ADBB /* ViewController.swift in Sources */,
+				DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */,
 				DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */,
 				DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */,
 			);

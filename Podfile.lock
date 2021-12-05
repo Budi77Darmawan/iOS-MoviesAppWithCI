@@ -1,21 +1,49 @@
 PODS:
-  - CommonExt (1.0.0)
+  - Alamofire (5.4.4)
+  - CommonExt (1.1.0)
+  - Realm (10.20.0):
+    - Realm/Headers (= 10.20.0)
+  - Realm/Headers (10.20.0)
+  - RealmSwift (10.20.0):
+    - Realm (= 10.20.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
   - SwiftLint (0.45.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - CommonExt
+  - RealmSwift
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/Budi77Darmawan/iOS-CommonExtPodspecs.git:
     - CommonExt
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
-  CommonExt: 62381f8f760041ad64c2bc575566312a5c11ca95
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  CommonExt: 623495605226b1ebeafcb812f33407136b753e2e
+  Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
+  RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
 
-PODFILE CHECKSUM: ce480af5800813d71ba22a6984cafaf6816805ce
+PODFILE CHECKSUM: b762c207d43f2e08e3fbaaf9004085e683511d0c
 
 COCOAPODS: 1.11.2

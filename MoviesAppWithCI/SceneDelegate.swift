@@ -17,11 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let windowScene = scene as? UIWindowScene else { return }
     
-    let homeViewController = UIViewController()
+    let tabBar = TabBarController(nibName: nil, bundle: nil)
     
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
-    window?.rootViewController = homeViewController
+    window?.rootViewController = tabBar.makeTabBar()
     window?.makeKeyAndVisible()
     window?.backgroundColor = .systemBackground
   }

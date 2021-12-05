@@ -1,16 +1,27 @@
+source 'https://github.com/Budi77Darmawan/iOS-CommonExtPodspecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
-
+# platform :ios, '9.0'
 use_frameworks!
-
 workspace 'MoviesAppWithCI'
 
 target 'MoviesAppWithCI' do
   # Comment the next line if you don't want to use dynamic frameworks
   
-  
   # Pods for MoviesAppWithCI
-  pod 'SwiftLint'
   pod 'CommonExt'
+  pod 'Alamofire', '~> 5.2'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RealmSwift'
+  pod 'SwiftLint'
   
 end
+
+target 'Core' do
+  project './Modules/Core/Core'
+  pod 'RealmSwift'
+  pod 'RxSwift', '~> 5'
+end
+

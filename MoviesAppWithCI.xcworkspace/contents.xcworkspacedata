@@ -5,6 +5,12 @@
       location = "group:MoviesAppWithCI.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Modules/Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/Home/Home.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
