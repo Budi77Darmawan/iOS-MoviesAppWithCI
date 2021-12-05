@@ -12,6 +12,7 @@ target 'MoviesAppWithCI' do
   
 
   # Pods for MoviesAppWithCI
+  pod 'SwiftLint'
 
 end
 
