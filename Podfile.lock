@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 750e6b4834a85a15464dde5fb6caa27f00db82b3
+PODS:
+  - CommonExt (1.0.0)
+  - SwiftLint (0.45.1)
+
+DEPENDENCIES:
+  - CommonExt
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/Budi77Darmawan/iOS-CommonExtPodspecs.git:
+    - CommonExt
+  trunk:
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  CommonExt: 62381f8f760041ad64c2bc575566312a5c11ca95
+  SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
+
+PODFILE CHECKSUM: ce480af5800813d71ba22a6984cafaf6816805ce
 
 COCOAPODS: 1.11.2
