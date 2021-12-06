@@ -15,10 +15,10 @@
 		DBA865CD275C637700E5ADBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA865CC275C637700E5ADBB /* Assets.xcassets */; };
 		DBA865D0275C637700E5ADBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA865CE275C637700E5ADBB /* LaunchScreen.storyboard */; };
 		DBA86634275CB80E00E5ADBB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DBA86633275CB80E00E5ADBB /* .swiftlint.yml */; };
-		DBA866CB275CF29B00E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA866CA275CF29B00E5ADBB /* Home.framework */; };
-		DBA866CC275CF29B00E5ADBB /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA866CA275CF29B00E5ADBB /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBA86709275D131D00E5ADBB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86708275D131D00E5ADBB /* Core.framework */; };
 		DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86708275D131D00E5ADBB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBA86718275D1C4400E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86717275D1C4400E5ADBB /* Home.framework */; };
+		DBA86719275D1C4400E5ADBB /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86717275D1C4400E5ADBB /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +28,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DBA866CC275CF29B00E5ADBB /* Home.framework in Embed Frameworks */,
 				DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */,
+				DBA86719275D1C4400E5ADBB /* Home.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +51,7 @@
 		DBA86633275CB80E00E5ADBB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DBA866CA275CF29B00E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86708275D131D00E5ADBB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA86717275D1C4400E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,7 @@
 			files = (
 				980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */,
 				DBA86709275D131D00E5ADBB /* Core.framework in Frameworks */,
-				DBA866CB275CF29B00E5ADBB /* Home.framework in Frameworks */,
+				DBA86718275D1C4400E5ADBB /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +71,7 @@
 		C63369C2473289B6C7C0ACC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBA86717275D1C4400E5ADBB /* Home.framework */,
 				DBA86708275D131D00E5ADBB /* Core.framework */,
 				DBA866CA275CF29B00E5ADBB /* Home.framework */,
 				03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */,

@@ -25,3 +25,11 @@ target 'Core' do
   pod 'RxSwift', '~> 5'
 end
 
+target 'Home' do
+  project './Modules/Home/Home'
+  pod 'CommonExt'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RealmSwift'
+end
+
