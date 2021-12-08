@@ -7,11 +7,12 @@
 
 import RxSwift
 
-public protocol LocalDataSource {
+public protocol LocaleDataSource {
   associatedtype Request
   associatedtype Response
   
-  func getDataLocal() -> Observable<[Response]>
+  func getBookmarkMovies() -> Observable<[Response]>
+  func getMovie(id: Request) -> Observable<Response>
   func addToLocal(entities: Response) -> Observable<Bool>
-  func deleteFromLocal(id: String) -> Observable<Bool>
+  func deleteFromLocal(id: Request) -> Observable<Bool>
 }

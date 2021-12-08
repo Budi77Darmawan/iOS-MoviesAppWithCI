@@ -24,6 +24,7 @@
 		DBA86716275D1A3B00E5ADBB /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA86715275D1A3B00E5ADBB /* Interactor.swift */; };
 		DBA86723275D8A4F00E5ADBB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA86722275D8A4F00E5ADBB /* ListViewModel.swift */; };
 		DBA86725275D8BDE00E5ADBB /* SingleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA86724275D8BDE00E5ADBB /* SingleViewModel.swift */; };
+		DBB9E828275EC78C005B0CF6 /* NetworkCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E827275EC78C005B0CF6 /* NetworkCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DBA86715275D1A3B00E5ADBB /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		DBA86722275D8A4F00E5ADBB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		DBA86724275D8BDE00E5ADBB /* SingleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewModel.swift; sourceTree = "<group>"; };
+		DBB9E827275EC78C005B0CF6 /* NetworkCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCall.swift; sourceTree = "<group>"; };
 		DC1EF774CEA688B91790CC14 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		DBA866F7275D0F9800E5ADBB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DBB9E826275EC781005B0CF6 /* Services */,
 				DBA8670B275D18F700E5ADBB /* Data */,
 				DBA866F8275D103500E5ADBB /* Domain */,
 				DBA86701275D112E00E5ADBB /* Utils */,
@@ -216,6 +219,14 @@
 				DBA86724275D8BDE00E5ADBB /* SingleViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBB9E826275EC781005B0CF6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DBB9E827275EC78C005B0CF6 /* NetworkCall.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		FC545FD89A25B10AA9CA8DAD /* Frameworks */ = {
@@ -361,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB9E828275EC78C005B0CF6 /* NetworkCall.swift in Sources */,
 				DBA86713275D199200E5ADBB /* LocalDataSource.swift in Sources */,
 				DBA866FE275D109500E5ADBB /* MovieResponse.swift in Sources */,
 				DBA86725275D8BDE00E5ADBB /* SingleViewModel.swift in Sources */,

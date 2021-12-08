@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */; };
+		DB5AC91D27604487004A5589 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC91C27604487004A5589 /* HomeRouter.swift */; };
 		DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C0275C637500E5ADBB /* AppDelegate.swift */; };
 		DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C2275C637500E5ADBB /* SceneDelegate.swift */; };
 		DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C4275C637500E5ADBB /* TabBarController.swift */; };
@@ -19,6 +20,7 @@
 		DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86708275D131D00E5ADBB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBA86718275D1C4400E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86717275D1C4400E5ADBB /* Home.framework */; };
 		DBA86719275D1C4400E5ADBB /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86717275D1C4400E5ADBB /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBB9E81E275EC3E2005B0CF6 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E81D275EC3E2005B0CF6 /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 		03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppWithCI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EDB0CDBBC531295A95DEB1 /* Pods-MoviesAppWithCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppWithCI.release.xcconfig"; path = "Target Support Files/Pods-MoviesAppWithCI/Pods-MoviesAppWithCI.release.xcconfig"; sourceTree = "<group>"; };
 		D468197E88579AF7A9B7E1C5 /* Pods-MoviesAppWithCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppWithCI.debug.xcconfig"; path = "Target Support Files/Pods-MoviesAppWithCI/Pods-MoviesAppWithCI.debug.xcconfig"; sourceTree = "<group>"; };
+		DB5AC91C27604487004A5589 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DBA865BD275C637500E5ADBB /* MoviesAppWithCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesAppWithCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA865C0275C637500E5ADBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA865C2275C637500E5ADBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		DBA866CA275CF29B00E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86708275D131D00E5ADBB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86717275D1C4400E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB9E81D275EC3E2005B0CF6 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB5AC91E276044BA004A5589 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DB5AC91C27604487004A5589 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DB77D19B275EC39D00FE48AE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DBB9E81C275EC3D9005B0CF6 /* DI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		DBA865B4275C637500E5ADBB = {
 			isa = PBXGroup;
 			children = (
@@ -101,15 +121,33 @@
 		DBA865BF275C637500E5ADBB /* MoviesAppWithCI */ = {
 			isa = PBXGroup;
 			children = (
-				DBA865C0275C637500E5ADBB /* AppDelegate.swift */,
-				DBA865C2275C637500E5ADBB /* SceneDelegate.swift */,
-				DBA865C4275C637500E5ADBB /* TabBarController.swift */,
+				DB5AC91E276044BA004A5589 /* Router */,
+				DBB9E81F275EC3F9005B0CF6 /* Base */,
+				DB77D19B275EC39D00FE48AE /* Core */,
 				DBA865CC275C637700E5ADBB /* Assets.xcassets */,
 				DBA865CE275C637700E5ADBB /* LaunchScreen.storyboard */,
 				DBA865D1275C637700E5ADBB /* Info.plist */,
 				DBA865C9275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld */,
 			);
 			path = MoviesAppWithCI;
+			sourceTree = "<group>";
+		};
+		DBB9E81C275EC3D9005B0CF6 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				DBB9E81D275EC3E2005B0CF6 /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		DBB9E81F275EC3F9005B0CF6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DBA865C0275C637500E5ADBB /* AppDelegate.swift */,
+				DBA865C2275C637500E5ADBB /* SceneDelegate.swift */,
+				DBA865C4275C637500E5ADBB /* TabBarController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F6A709719338B27FE1DB95B0 /* Pods */ = {
@@ -256,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB9E81E275EC3E2005B0CF6 /* Injection.swift in Sources */,
+				DB5AC91D27604487004A5589 /* HomeRouter.swift in Sources */,
 				DBA865CB275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld in Sources */,
 				DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */,
 				DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */,

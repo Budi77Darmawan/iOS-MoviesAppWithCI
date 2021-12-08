@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Home
 
 class TabBarController: UITabBarController {
   

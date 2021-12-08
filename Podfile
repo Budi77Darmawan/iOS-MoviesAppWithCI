@@ -21,6 +21,7 @@ end
 
 target 'Core' do
   project './Modules/Core/Core'
+  pod 'Alamofire', '~> 5.2'
   pod 'RealmSwift'
   pod 'RxSwift', '~> 5'
 end

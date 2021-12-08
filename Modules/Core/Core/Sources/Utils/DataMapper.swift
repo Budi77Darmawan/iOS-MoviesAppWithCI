@@ -10,8 +10,8 @@ import RealmSwift
 
 public final class DataMapper {
   
-  public static func mapMoviesResponseToMovieModel(data: MoviesResponse) -> [MovieModel] {
-    guard let listMovie = data.results else { return [] }
+  public static func mapMoviesResponseToMovieModel(data: MoviesResponse?) -> [MovieModel] {
+    guard let listMovie = data?.results else { return [] }
     return listMovie.map { movie in
       MovieModel(adult: movie.adult, backdropPath: movie.backdropPath, genres: nil, id: movie.id, overview: movie.overview, popularity: movie.popularity, posterPath: movie.posterPath, releaseDate: movie.releaseDate, runtime: nil, title: movie.title, voteAverage: movie.voteAverage, voteCount: movie.voteCount)
     }

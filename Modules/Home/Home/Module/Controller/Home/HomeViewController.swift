@@ -7,14 +7,20 @@
 
 import UIKit
 import CommonExt
+import Core
 
-class HomeViewController: UIViewController {
+public class HomeViewController: UIViewController {
+  
+  public var viewModel: HomeViewModel<
+    Interactor<String, [MovieModel], GetMoviesRepository<GetMoviesRemoteDataSource>>
+  >? = nil
   
   @IBOutlet weak var moviesTableView: UITableView!
   
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     initTableView()
+    viewModel?.getMovies()
   }
   
   private func initTableView() {
@@ -29,7 +35,7 @@ class HomeViewController: UIViewController {
   }
   
   @IBAction func navigateToDetail(_ sender: Any) {
-    HomeRouter.navigateToDetailView(viewController: self)
+//    HomeRouter.navigateToDetailView(viewController: self)
   }
   
   @objc
@@ -42,12 +48,12 @@ class HomeViewController: UIViewController {
 
 // MARK: TableView
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //    list.count
     0
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
       return UITableViewCell()
     }
@@ -55,7 +61,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //    let movieId = list[indexPath.row].id
 //    homeViewModel?.navigateToDetail(viewController: self, movieId: movieId)
   }
