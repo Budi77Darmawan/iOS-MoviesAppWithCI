@@ -23,26 +23,14 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOJ-j9-JVj">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="navigateToDetail:" destination="-1" eventType="touchUpInside" id="3k1-Wm-sOE"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7mw-pG-mmC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="90g-yq-3br"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fOJ-j9-JVj" secondAttribute="bottom" id="BWp-Nt-4Go"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7mw-pG-mmC" secondAttribute="trailing" id="Oaw-7G-sHW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7mw-pG-mmC" secondAttribute="bottom" id="PGa-nd-iJd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fOJ-j9-JVj" secondAttribute="trailing" id="TDl-th-NNj"/>
                 <constraint firstItem="7mw-pG-mmC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gTI-IA-Y8I"/>
-                <constraint firstItem="fOJ-j9-JVj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tZc-jB-iir"/>
-                <constraint firstItem="fOJ-j9-JVj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xkO-Kh-mMD"/>
             </constraints>
             <point key="canvasLocation" x="300" y="108"/>
         </view>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AC544EB3C185CC8313B6497 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882082FCBDCCB27BCAD82E04 /* Pods_Core.framework */; };
+		DB09D6622762C3C700133A57 /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D6612762C3C700133A57 /* ImageView+Ext.swift */; };
 		DBA866E2275D0F8500E5ADBB /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = DBA866E1275D0F8500E5ADBB /* Core.docc */; };
 		DBA866E8275D0F8500E5ADBB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA866DD275D0F8500E5ADBB /* Core.framework */; };
 		DBA866ED275D0F8500E5ADBB /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA866EC275D0F8500E5ADBB /* CoreTests.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		882082FCBDCCB27BCAD82E04 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C14BDFD5FD45F486511221 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
+		DB09D6612762C3C700133A57 /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
 		DBA866DD275D0F8500E5ADBB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA866E0275D0F8500E5ADBB /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		DBA866E1275D0F8500E5ADBB /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
+		DB09D6602762C3B900133A57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB09D6612762C3C700133A57 /* ImageView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DBA866D3275D0F8500E5ADBB = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		DBA866F7275D0F9800E5ADBB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DB09D6602762C3B900133A57 /* Extensions */,
 				DBB9E826275EC781005B0CF6 /* Services */,
 				DBA8670B275D18F700E5ADBB /* Data */,
 				DBA866F8275D103500E5ADBB /* Domain */,
@@ -383,6 +394,7 @@
 				DBA8670F275D191E00E5ADBB /* Repository.swift in Sources */,
 				DBA86711275D197E00E5ADBB /* RemoteDataSource.swift in Sources */,
 				DBA866FB275D105800E5ADBB /* MovieModel.swift in Sources */,
+				DB09D6622762C3C700133A57 /* ImageView+Ext.swift in Sources */,
 				DBA86700275D10B400E5ADBB /* DetailMovieResponse.swift in Sources */,
 				DBA86705275D120000E5ADBB /* ObjMovie.swift in Sources */,
 				DBA866E2275D0F8500E5ADBB /* Core.docc in Sources */,

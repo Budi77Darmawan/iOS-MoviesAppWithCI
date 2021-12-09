@@ -9,7 +9,9 @@ import Foundation
 import RxSwift
 import Core
 
-public class HomeViewModel<MoviesUseCase: UseCase>: ObservableObject
+public class HomeViewModel<
+  MoviesUseCase: UseCase
+>: ObservableObject
 where
 MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
   private let disposeBag = DisposeBag()

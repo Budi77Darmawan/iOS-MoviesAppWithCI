@@ -2,21 +2,23 @@
 //  MovieTableViewCell.swift
 //  Home
 //
-//  Created by Budi Darmawan on 05/12/21.
+//  Created by Budi Darmawan on 10/12/21.
 //
 
 import UIKit
+import Core
 
 class MovieTableViewCell: UITableViewCell {
+  
   static let identifier = "MovieTableViewCell"
   static func nib() -> UINib {
     return UINib(nibName: "MovieTableViewCell",
-                 bundle: nil)
+                 bundle: Bundle(identifier: "com.bd-drmwan.Home"))
   }
   
   @IBOutlet weak var movieImage: UIImageView!
-  @IBOutlet weak var movieTitleLabel: UILabel!
-  @IBOutlet weak var movieDescriptionLabel: UILabel!
+  @IBOutlet weak var movieTitle: UILabel!
+  @IBOutlet weak var movieDescription: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -29,10 +31,10 @@ class MovieTableViewCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
-//  func config(movie: MovieModel) {
-//    movieTitleLabel.text = movie.title
-//    movieDescriptionLabel.text = movie.overview
-    //    imgMovie.loadImage(uri: movie.posterPath)
-//  }
+  func configureCell(with movie: MovieModel) {
+    movieTitle.text = movie.title
+    movieDescription.text = movie.overview
+    movieImage.loadImage(uri: movie.posterPath)
+  }
   
 }

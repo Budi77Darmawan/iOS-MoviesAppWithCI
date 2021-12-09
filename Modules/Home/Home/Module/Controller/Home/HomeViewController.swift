@@ -8,12 +8,16 @@
 import UIKit
 import CommonExt
 import Core
+import RxSwift
 
 public class HomeViewController: UIViewController {
   
   public var viewModel: HomeViewModel<
     Interactor<String, [MovieModel], GetMoviesRepository<GetMoviesRemoteDataSource>>
-  >? = nil
+  >?
+  
+  private let disposeBag = DisposeBag()
+  private var movies: [MovieModel] = []
   
   @IBOutlet weak var moviesTableView: UITableView!
   
@@ -21,6 +25,22 @@ public class HomeViewController: UIViewController {
     super.viewDidLoad()
     initTableView()
     viewModel?.getMovies()
+    
+    viewModel?.result
+      .subscribe( onNext: { res in
+        self.movies.append(contentsOf: res)
+        if self.movies.isEmpty {
+          self.moviesTableView.setBackground(imageName: "img_empty_items", messageImage: "No items")
+          return
+        }
+        self.moviesTableView.reloads()
+        self.moviesTableView.endRefreshControl()
+        self.moviesTableView.clearBackground()
+      }, onError: { error in
+        let message = error.localizedDescription
+        self.moviesTableView.setBackground(imageName: "img_error_connection", messageImage: message)
+      })
+      .disposed(by: disposeBag)
   }
   
   private func initTableView() {
@@ -31,17 +51,12 @@ public class HomeViewController: UIViewController {
     moviesTableView.refreshControl = UIRefreshControl()
     moviesTableView.refreshControl?.beginRefreshing()
     moviesTableView.refreshControl?.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
-//    moviesTableView.setBackground(imageName: "person.fill", messageImage: "No action")
-  }
-  
-  @IBAction func navigateToDetail(_ sender: Any) {
-//    HomeRouter.navigateToDetailView(viewController: self)
   }
   
   @objc
   private func refreshTableView() {
-//    self.list.removeAll()
-//    self.homeViewModel?.getMovie(type: EnumMovie.popular)
+    self.movies.removeAll()
+    self.viewModel?.getMovies()
   }
 
 }
@@ -49,20 +64,19 @@ public class HomeViewController: UIViewController {
 // MARK: TableView
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    list.count
-    0
+    movies.count
   }
   
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
       return UITableViewCell()
     }
-//    cell.config(movie: list[indexPath.row])
+    cell.configureCell(with: movies[indexPath.row])
     return cell
   }
   
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let movieId = list[indexPath.row].id
+    let movieId = movies[indexPath.row].id
 //    homeViewModel?.navigateToDetail(viewController: self, movieId: movieId)
   }
   

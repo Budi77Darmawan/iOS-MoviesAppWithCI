@@ -14,6 +14,7 @@ target 'MoviesAppWithCI' do
   pod 'Alamofire', '~> 5.2'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SDWebImage', '~> 5.12.0'
   pod 'RealmSwift'
   pod 'SwiftLint'
   
@@ -24,6 +25,7 @@ target 'Core' do
   pod 'Alamofire', '~> 5.2'
   pod 'RealmSwift'
   pod 'RxSwift', '~> 5'
+  pod 'SDWebImage', '~> 5.12.0'
 end
 
 target 'Home' do

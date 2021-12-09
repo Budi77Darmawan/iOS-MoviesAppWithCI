@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */; };
+		DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */; };
 		DB5AC920276046CD004A5589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC91F276046CD004A5589 /* HomeViewModel.swift */; };
 		DBA86699275CCC7100E5ADBB /* Home.docc in Sources */ = {isa = PBXBuildFile; fileRef = DBA86698275CCC7100E5ADBB /* Home.docc */; };
 		DBA8669F275CCC7100E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86694275CCC7100E5ADBB /* Home.framework */; };
@@ -14,8 +16,6 @@
 		DBA866A5275CCC7100E5ADBB /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA86697275CCC7100E5ADBB /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBA866B1275CCC8400E5ADBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA866AF275CCC8400E5ADBB /* HomeViewController.swift */; };
 		DBA866B2275CCC8400E5ADBB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA866B0275CCC8400E5ADBB /* HomeViewController.xib */; };
-		DBA866D1275CFBFF00E5ADBB /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA866CF275CFBFF00E5ADBB /* MovieTableViewCell.swift */; };
-		DBA866D2275CFBFF00E5ADBB /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA866D0275CFBFF00E5ADBB /* MovieTableViewCell.xib */; };
 		DBA8671F275D68FD00E5ADBB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8671D275D68FD00E5ADBB /* DetailViewController.swift */; };
 		DBA86720275D68FD00E5ADBB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA8671E275D68FD00E5ADBB /* DetailViewController.xib */; };
 		DBB9E825275EC692005B0CF6 /* GetMoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E824275EC692005B0CF6 /* GetMoviesRemoteDataSource.swift */; };
@@ -39,6 +39,8 @@
 		04F03375B18FC7002F722230 /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		29822CB91C55E3FDE5AE4259 /* Pods-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Home/Pods-Home.release.xcconfig"; sourceTree = "<group>"; };
 		61D3490C14A26FBF61BB38D2 /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		DB5AC91F276046CD004A5589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DBA86694275CCC7100E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86697275CCC7100E5ADBB /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -48,8 +50,6 @@
 		DBA866AF275CCC8400E5ADBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBA866B0275CCC8400E5ADBB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		DBA866C1275CDFA700E5ADBB /* CommonExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBA866CF275CFBFF00E5ADBB /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		DBA866D0275CFBFF00E5ADBB /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		DBA8671D275D68FD00E5ADBB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DBA8671E275D68FD00E5ADBB /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		DBB9E824275EC692005B0CF6 /* GetMoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -150,9 +150,9 @@
 			children = (
 				DBA866AF275CCC8400E5ADBB /* HomeViewController.swift */,
 				DBA866B0275CCC8400E5ADBB /* HomeViewController.xib */,
-				DBA866CF275CFBFF00E5ADBB /* MovieTableViewCell.swift */,
-				DBA866D0275CFBFF00E5ADBB /* MovieTableViewCell.xib */,
 				DB5AC91F276046CD004A5589 /* HomeViewModel.swift */,
+				DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */,
+				DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -303,9 +303,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA866D2275CFBFF00E5ADBB /* MovieTableViewCell.xib in Resources */,
 				DBA86720275D68FD00E5ADBB /* DetailViewController.xib in Resources */,
 				DBA866B2275CCC8400E5ADBB /* HomeViewController.xib in Resources */,
+				DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +354,8 @@
 				DB5AC920276046CD004A5589 /* HomeViewModel.swift in Sources */,
 				DBB9E830275ECC66005B0CF6 /* MoviesLocaleDataSource.swift in Sources */,
 				DBA866B1275CCC8400E5ADBB /* HomeViewController.swift in Sources */,
+				DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */,
 				DBB9E82E275ECBAA005B0CF6 /* GetMoviesRepository.swift in Sources */,
-				DBA866D1275CFBFF00E5ADBB /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

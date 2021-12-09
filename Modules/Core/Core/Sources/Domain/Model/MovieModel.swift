@@ -6,19 +6,19 @@
 //
 
 public struct MovieModel: Codable {
-  let adult: Bool
-  let backdropPath: String?
-  let genres: [Genre]?
-  let id: Int
-  let overview: String
-  let popularity: Double
-  let posterPath: String?
-  let releaseDate: String
-  let runtime: Int?
-  let title: String
-  let voteAverage: Double
-  let voteCount: Int
-  var isBookmark: Bool = false
+  public let adult: Bool
+  public let backdropPath: String?
+  public let genres: [Genre]?
+  public let id: Int
+  public let overview: String
+  public let popularity: Double
+  public let posterPath: String?
+  public let releaseDate: String
+  public let runtime: Int?
+  public let title: String
+  public let voteAverage: Double
+  public let voteCount: Int
+  public var isBookmark: Bool = false
   
   enum CodingKeys: String, CodingKey {
     case adult
