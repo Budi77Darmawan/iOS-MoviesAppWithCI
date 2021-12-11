@@ -77,7 +77,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let movieId = movies[indexPath.row].id
-//    homeViewModel?.navigateToDetail(viewController: self, movieId: movieId)
+    viewModel?.navigateToDetail(viewController: self, movieId: movieId)
   }
   
 }

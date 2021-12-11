@@ -1,15 +1,15 @@
 //
-//  HomeRouter.swift
+//  Router.swift
 //  MoviesAppWithCI
 //
-//  Created by Budi Darmawan on 08/12/21.
+//  Created by Budi Darmawan on 11/12/21.
 //
 
-import Home
 import UIKit
+import Home
 import Core
 
-public class HomeRouter {
+public class Router {
   static let bundleHome = "com.bd-drmwan.Home"
   
   public static func makeHomeView() -> UIViewController {
@@ -17,8 +17,8 @@ public class HomeRouter {
       nibName: "HomeViewController",
       bundle: Bundle(identifier: bundleHome)
     )
-    homeVC.title = "Discover"
-    homeVC.tabBarItem = UITabBarItem(title: "Movies", image: UIImage(systemName: "play.fill"), tag: 0)
+    homeVC.title = "home_title".localized()
+    homeVC.tabBarItem = UITabBarItem(title: "home_title_bar".localized(), image: UIImage(systemName: "play.fill"), tag: 0)
     
     let useCase: Interactor<
         String,
@@ -31,13 +31,4 @@ public class HomeRouter {
     
     return homeVC
   }
-  
-//  public static func navigateToDetailView(viewController: UIViewController) {
-//    let detailVC = DetailViewController(
-//      nibName: "DetailViewController",
-//      bundle: Bundle(identifier: bundleHome)
-//    )
-//    viewController.navigationController?.pushViewController(detailVC, animated: true)
-//  }
-  
 }

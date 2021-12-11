@@ -16,6 +16,7 @@ where
 MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
   private let disposeBag = DisposeBag()
   private let _moviesUseCase: MoviesUseCase
+  typealias Router = HomeRouter
   
   let result = PublishSubject<[MovieModel]>()
   
@@ -31,8 +32,11 @@ MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
       } onError: { error in
         self.result.onError(error)
       } onCompleted: {
-        print("COMPLETED")
       }
       .disposed(by: disposeBag)
+  }
+  
+  func navigateToDetail(viewController: UIViewController, movieId: Int) {
+    Router.navigateToDetailView(viewController: viewController)
   }
 }

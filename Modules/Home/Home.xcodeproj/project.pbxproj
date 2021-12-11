@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */; };
 		DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */; };
+		DB582B2B276462A8005771C9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582B2A276462A8005771C9 /* HomeRouter.swift */; };
 		DB5AC920276046CD004A5589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC91F276046CD004A5589 /* HomeViewModel.swift */; };
 		DBA86699275CCC7100E5ADBB /* Home.docc in Sources */ = {isa = PBXBuildFile; fileRef = DBA86698275CCC7100E5ADBB /* Home.docc */; };
 		DBA8669F275CCC7100E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86694275CCC7100E5ADBB /* Home.framework */; };
@@ -41,6 +42,7 @@
 		61D3490C14A26FBF61BB38D2 /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		DB582B2A276462A8005771C9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DB5AC91F276046CD004A5589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DBA86694275CCC7100E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86697275CCC7100E5ADBB /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB582B292764629C005771C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DB582B2A276462A8005771C9 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		DBA8668A275CCC7100E5ADBB = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		DBA866AE275CCC7800E5ADBB /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DB582B292764629C005771C9 /* Router */,
 				DBB9E820275EC623005B0CF6 /* Data */,
 				DBA866BF275CDC9600E5ADBB /* Controller */,
 			);
@@ -355,6 +366,7 @@
 				DBB9E830275ECC66005B0CF6 /* MoviesLocaleDataSource.swift in Sources */,
 				DBA866B1275CCC8400E5ADBB /* HomeViewController.swift in Sources */,
 				DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */,
+				DB582B2B276462A8005771C9 /* HomeRouter.swift in Sources */,
 				DBB9E82E275ECBAA005B0CF6 /* GetMoviesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,12 +13,12 @@ public final class DataMapper {
   public static func mapMoviesResponseToMovieModel(data: MoviesResponse?) -> [MovieModel] {
     guard let listMovie = data?.results else { return [] }
     return listMovie.map { movie in
-      MovieModel(adult: movie.adult, backdropPath: movie.backdropPath, genres: nil, id: movie.id, overview: movie.overview, popularity: movie.popularity, posterPath: movie.posterPath, releaseDate: movie.releaseDate, runtime: nil, title: movie.title, voteAverage: movie.voteAverage, voteCount: movie.voteCount)
+      MovieModel(adult: movie.adult, backdropPath: movie.backdropPath, genres: nil, id: movie.id, overview: movie.overview.isEmpty ? "---" : movie.overview, popularity: movie.popularity, posterPath: movie.posterPath, releaseDate: movie.releaseDate, runtime: nil, title: movie.title, voteAverage: movie.voteAverage, voteCount: movie.voteCount)
     }
   }
   
   public static func mapDetailResponseToMovieModel(data: DetailsMovieResponse) -> MovieModel {
-    return MovieModel(adult: data.adult, backdropPath: data.backdropPath, genres: data.genres, id: data.id, overview: data.overview, popularity: data.popularity, posterPath: data.posterPath, releaseDate: data.releaseDate, runtime: data.runtime, title: data.title, voteAverage: data.voteAverage, voteCount: data.voteCount)
+    return MovieModel(adult: data.adult, backdropPath: data.backdropPath, genres: data.genres, id: data.id, overview: data.overview.isEmpty ? "---" : data.overview, popularity: data.popularity, posterPath: data.posterPath, releaseDate: data.releaseDate, runtime: data.runtime, title: data.title, voteAverage: data.voteAverage, voteCount: data.voteCount)
   }
   
   public static func mapListToString(from data: [Genre], separator: String = ",") -> String {

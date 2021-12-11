@@ -22,7 +22,7 @@ public protocol Endpoint {
 }
 
 public enum Endpoints {
-//  public typealias EnumMovie = Endpoints.Movie
+  //  public typealias EnumMovie = Endpoints.Movie
   
   public enum Movie: Endpoint {
     case popular
@@ -48,7 +48,7 @@ public enum Endpoints {
     public func params(parameters: Parameters?) -> Parameters {
       let paramAPIKey: Parameters = [
         "api_key": API.apiKey,
-        "language": "en-US"
+        "language": "param_language".localized()
       ]
       
       guard var params = parameters else {
@@ -63,9 +63,10 @@ public enum Endpoints {
 }
 
 public class NetworkCall: NSObject {
-  public func executeQuery<T> (url: URL?,
-                        method: HTTPMethod,
-                        params: Parameters
+  public func executeQuery<T> (
+    url: URL?,
+    method: HTTPMethod,
+    params: Parameters
   ) -> Observable<T> where T: Decodable {
     return Observable<T>.create({ observer in
       guard let url = url else {
@@ -102,15 +103,15 @@ public class NetworkCall: NSObject {
 }
 
 public enum URLError: LocalizedError {
-    case invalidRequest
-    case invalidResponse
-    case addressUnreachable(URL)
-    
-    public var errorDescription: String? {
-        switch self {
-        case .invalidRequest: return "Request is null."
-        case .invalidResponse: return "The server responded with garbage."
-        case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable."
-        }
+  case invalidRequest
+  case invalidResponse
+  case addressUnreachable(URL)
+  
+  public var errorDescription: String? {
+    switch self {
+    case .invalidRequest: return "Request is null."
+    case .invalidResponse: return "The server responded with garbage."
+    case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable."
     }
+  }
 }

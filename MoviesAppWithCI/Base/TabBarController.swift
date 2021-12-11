@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
   
   func makeTabBar() -> TabBarController {
     self.viewControllers = [
-      makeNavigation(viewController: HomeRouter.makeHomeView())
+      makeNavigation(viewController: Router.makeHomeView())
     ]
     return self
   }

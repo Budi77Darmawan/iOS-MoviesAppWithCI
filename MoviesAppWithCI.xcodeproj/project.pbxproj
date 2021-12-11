@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CECDDCCC59D724FCE82E0D /* Pods_MoviesAppWithCI.framework */; };
 		DB09D66C2762C59B00133A57 /* MoviesAppWithCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D66B2762C59B00133A57 /* MoviesAppWithCITests.swift */; };
-		DB5AC91D27604487004A5589 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC91C27604487004A5589 /* HomeRouter.swift */; };
+		DB582B2E27646357005771C9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582B2D27646357005771C9 /* Router.swift */; };
 		DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C0275C637500E5ADBB /* AppDelegate.swift */; };
 		DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C2275C637500E5ADBB /* SceneDelegate.swift */; };
 		DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C4275C637500E5ADBB /* TabBarController.swift */; };
@@ -55,7 +55,7 @@
 		D468197E88579AF7A9B7E1C5 /* Pods-MoviesAppWithCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppWithCI.debug.xcconfig"; path = "Target Support Files/Pods-MoviesAppWithCI/Pods-MoviesAppWithCI.debug.xcconfig"; sourceTree = "<group>"; };
 		DB09D6692762C59B00133A57 /* MoviesAppWithCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppWithCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09D66B2762C59B00133A57 /* MoviesAppWithCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppWithCITests.swift; sourceTree = "<group>"; };
-		DB5AC91C27604487004A5589 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DB582B2D27646357005771C9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DBA865BD275C637500E5ADBB /* MoviesAppWithCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesAppWithCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA865C0275C637500E5ADBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA865C2275C637500E5ADBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,10 +111,10 @@
 			path = MoviesAppWithCITests;
 			sourceTree = "<group>";
 		};
-		DB5AC91E276044BA004A5589 /* Router */ = {
+		DB582B2C2764634D005771C9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				DB5AC91C27604487004A5589 /* HomeRouter.swift */,
+				DB582B2D27646357005771C9 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 		DBA865BF275C637500E5ADBB /* MoviesAppWithCI */ = {
 			isa = PBXGroup;
 			children = (
-				DB5AC91E276044BA004A5589 /* Router */,
+				DB582B2C2764634D005771C9 /* Router */,
 				DBB9E81F275EC3F9005B0CF6 /* Base */,
 				DB77D19B275EC39D00FE48AE /* Core */,
 				DBA865CC275C637700E5ADBB /* Assets.xcassets */,
@@ -363,10 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB9E81E275EC3E2005B0CF6 /* Injection.swift in Sources */,
-				DB5AC91D27604487004A5589 /* HomeRouter.swift in Sources */,
 				DBA865CB275C637600E5ADBB /* MoviesAppWithCI.xcdatamodeld in Sources */,
 				DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */,
 				DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */,
+				DB582B2E27646357005771C9 /* Router.swift in Sources */,
 				DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -502,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
