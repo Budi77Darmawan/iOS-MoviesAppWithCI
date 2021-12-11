@@ -16,4 +16,10 @@ final class Injection: NSObject {
     let repository = GetMoviesRepository(remoteDataSource: remote)
     return Interactor(repository: repository) as! U
   }
+  
+  func provideMovie<U: UseCase>(movieId: Int) -> U where U.Request == String, U.Response == MovieModel {
+    let remote = GetMovieRemoteDataSource(endpoint: Endpoints.Movie.detail(movieId: movieId))
+    let repository = GetMovieRepository(remoteDataSource: remote)
+    return Interactor(repository: repository) as! U
+  }
 }

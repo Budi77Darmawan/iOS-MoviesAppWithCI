@@ -27,8 +27,29 @@ public class Router {
             GetMoviesRemoteDataSource>
     > = Injection.init().provideMovies()
     
-    homeVC.viewModel = HomeViewModel(useCase: useCase)
+    homeVC.viewModel = HomeViewModel(useCase: useCase) { viewContoller, movieId in
+      navigateToDetail(viewController: viewContoller, movieId: movieId)
+    }
     
     return homeVC
   }
+  
+  public static func navigateToDetail(viewController: UIViewController, movieId: Int) {
+    let detailVC = DetailViewController(
+      nibName: "DetailViewController",
+      bundle: Bundle(identifier: bundleHome)
+    )
+    
+    let useCase: Interactor<
+        String,
+        MovieModel,
+        GetMovieRepository<
+            GetMovieRemoteDataSource>
+    > = Injection.init().provideMovie(movieId: movieId)
+    
+    detailVC.viewModel = DetailViewModel(useCase: useCase)
+    
+    viewController.navigationController?.pushViewController(detailVC, animated: true)
+  }
+  
 }

@@ -10,6 +10,9 @@
 		DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */; };
 		DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */; };
 		DB582B2B276462A8005771C9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582B2A276462A8005771C9 /* HomeRouter.swift */; };
+		DB58B70227649E1100B33F35 /* GetMovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B70127649E1100B33F35 /* GetMovieRemoteDataSource.swift */; };
+		DB58B70427649E9600B33F35 /* GetMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B70327649E9600B33F35 /* GetMovieRepository.swift */; };
+		DB58B7062764A01900B33F35 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B7052764A01900B33F35 /* DetailViewModel.swift */; };
 		DB5AC920276046CD004A5589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC91F276046CD004A5589 /* HomeViewModel.swift */; };
 		DBA86699275CCC7100E5ADBB /* Home.docc in Sources */ = {isa = PBXBuildFile; fileRef = DBA86698275CCC7100E5ADBB /* Home.docc */; };
 		DBA8669F275CCC7100E5ADBB /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA86694275CCC7100E5ADBB /* Home.framework */; };
@@ -43,6 +46,9 @@
 		DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		DB582B2A276462A8005771C9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DB58B70127649E1100B33F35 /* GetMovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieRemoteDataSource.swift; sourceTree = "<group>"; };
+		DB58B70327649E9600B33F35 /* GetMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieRepository.swift; sourceTree = "<group>"; };
+		DB58B7052764A01900B33F35 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DB5AC91F276046CD004A5589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DBA86694275CCC7100E5ADBB /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA86697275CCC7100E5ADBB /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 			children = (
 				DBA8671D275D68FD00E5ADBB /* DetailViewController.swift */,
 				DBA8671E275D68FD00E5ADBB /* DetailViewController.xib */,
+				DB58B7052764A01900B33F35 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB9E82D275ECBAA005B0CF6 /* GetMoviesRepository.swift */,
+				DB58B70327649E9600B33F35 /* GetMovieRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB9E824275EC692005B0CF6 /* GetMoviesRemoteDataSource.swift */,
+				DB58B70127649E1100B33F35 /* GetMovieRemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -365,6 +374,9 @@
 				DB5AC920276046CD004A5589 /* HomeViewModel.swift in Sources */,
 				DBB9E830275ECC66005B0CF6 /* MoviesLocaleDataSource.swift in Sources */,
 				DBA866B1275CCC8400E5ADBB /* HomeViewController.swift in Sources */,
+				DB58B70227649E1100B33F35 /* GetMovieRemoteDataSource.swift in Sources */,
+				DB58B7062764A01900B33F35 /* DetailViewModel.swift in Sources */,
+				DB58B70427649E9600B33F35 /* GetMovieRepository.swift in Sources */,
 				DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */,
 				DB582B2B276462A8005771C9 /* HomeRouter.swift in Sources */,
 				DBB9E82E275ECBAA005B0CF6 /* GetMoviesRepository.swift in Sources */,

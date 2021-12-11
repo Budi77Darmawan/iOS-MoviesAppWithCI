@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Core
+
+  Created by Budi Darmawan on 11/12/21.
+  
+*/
+
+//MARK: Parameters Endpoints
+"param_language" = "id-ID";
+
+// MARK: Bottom Bar String
+"home_title_bar" = "Film";
+"bookmark_title_bar" = "Ditandai";
+"profile_title_bar" = "Akun";
+
+// MARK: Common String
+"home_title" = "Daftar Film";
+"overview" = "Ringkasan";
+"bookmark" = "Tandai";
+"bookmarked" = "Ditandai";
+"runtime" = "Durasi";
+"hours" = "Jam";
+"minutes" = "Menit";
+

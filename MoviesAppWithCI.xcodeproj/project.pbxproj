@@ -151,8 +151,8 @@
 		DBA865BF275C637500E5ADBB /* MoviesAppWithCI */ = {
 			isa = PBXGroup;
 			children = (
-				DB582B2C2764634D005771C9 /* Router */,
 				DBB9E81F275EC3F9005B0CF6 /* Base */,
+				DB582B2C2764634D005771C9 /* Router */,
 				DB77D19B275EC39D00FE48AE /* Core */,
 				DBA865CC275C637700E5ADBB /* Assets.xcassets */,
 				DBA865CE275C637700E5ADBB /* LaunchScreen.storyboard */,

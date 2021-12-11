@@ -6,36 +6,84 @@
 //
 
 import UIKit
+import Core
 import CommonExt
+import RxSwift
 
-class DetailViewController: UIViewController {
+public class DetailViewController: UIViewController {
   
+  public var viewModel: DetailViewModel<
+    Interactor<String, MovieModel, GetMovieRepository<GetMovieRemoteDataSource>>
+  >?
   
-  override func viewWillAppear(_ animated: Bool) {
+  private let disposeBag = DisposeBag()
+  
+  @IBOutlet weak var backdropImage: UIImageView!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var genreLabel: UILabel!
+  @IBOutlet weak var runtimeLabel: UILabel!
+  @IBOutlet weak var bookmarkButton: UIButton!
+  @IBOutlet weak var posterImage: UIImageView!
+  @IBOutlet weak var overviewStaticLabel: UILabel!
+  @IBOutlet weak var overviewLabel: UILabel!
+  
+  public override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.tabBarController?.tabBar.invisible()
   }
   
-  override func viewWillDisappear(_ animated: Bool) {
+  public override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     self.tabBarController?.tabBar.visible()
   }
   
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "Detail"
-    // Do any additional setup after loading the view.
+    viewModel?.getMovie()
+    overviewStaticLabel.text = "overview".localized()
+    
+    viewModel?.result
+      .subscribe( onNext: { res in
+        guard let movie = res else { return }
+        self.setupView(with: movie)
+      }, onError: { _ in
+      })
+      .disposed(by: disposeBag)
   }
   
+  private func setupView(with movie: MovieModel) {
+    self.title = movie.title
+    titleLabel.text = movie.title
+    backdropImage.loadImage(uri: movie.backdropPath)
+    posterImage.loadImage(uri: movie.posterPath)
+    posterImage.cornerRadius(8)
+    genreLabel.text = DataMapper.mapListToString(from: movie.genres ?? [])
+    overviewLabel.text = movie.overview
+    runtimeLabel.text = "runtime".localized() + ": \(DataMapper.mapMinutesToHoursMinutes(from: movie.runtime ?? 0))"
+    bookmarkButton.addTarget(self, action: #selector(updateBookmarksMovie), for: .touchUpInside)
+  }
   
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  @objc
+  private func updateBookmarksMovie() {
+//    viewModel?.updateBookmarksMovie()
+  }
   
+  private func setupButtonBookmark(isBookmark: Bool) {
+    if isBookmark {
+      bookmarkButton.setTitle("Bookmarked".localized(), for: .normal)
+      bookmarkButton.setTitleColor(.white, for: .normal)
+      bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+      bookmarkButton.tintColor = .white
+      bookmarkButton.backgroundColor = .systemBlue
+    } else {
+      bookmarkButton.setTitle("Bookmark".localized(), for: .normal)
+      bookmarkButton.setTitleColor(.systemBlue, for: .normal)
+      bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+      bookmarkButton.tintColor = .systemBlue
+      bookmarkButton.backgroundColor = .clear
+    }
+    bookmarkButton.cornerRadius(8)
+    bookmarkButton.layer.borderWidth = 1
+    bookmarkButton.layer.borderColor = UIColor.systemBlue.cgColor
+  }
 }

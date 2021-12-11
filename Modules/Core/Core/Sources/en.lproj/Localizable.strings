@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Core
+
+  Created by Budi Darmawan on 11/12/21.
+  
+*/
+
+//MARK: Parameters Endpoints
+"param_language" = "en-US";
+
+// MARK: Bottom Bar String
+"home_title_bar" = "Movies";
+"bookmark_title_bar" = "Bookmark";
+"profile_title_bar" = "Profile";
+
+// MARK: Common String
+"home_title" = "Discover";
+"overview" = "Overview";
+"bookmark" = "Bookmark";
+"bookmarked" = "Bookmarked";
+"runtime" = "Runtime";
+"hours" = "Hours";
+"minutes" = "Minutes";
+
