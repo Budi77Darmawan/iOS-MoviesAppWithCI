@@ -9,10 +9,12 @@ import UIKit
 import Core
 import Home
 import Bookmark
+import Profile
 
 public class Router {
   static let bundleHome = "com.bd-drmwan.Home"
   static let bundleBookmark = "com.bd-drmwan.Bookmark"
+  static let bundleProfile = "com.bd-drmwan.Profile"
   
   private static let injection = Injection.init()
   
@@ -58,6 +60,17 @@ public class Router {
     }
     
     return bokmarkVC
+  }
+  
+  public static func makeProfileView() -> UIViewController {
+    let profileVC = ProfileViewController(
+      nibName: "ProfileViewController",
+      bundle: Bundle(identifier: bundleProfile)
+    )
+    profileVC.title = "profile_title".localized()
+    profileVC.tabBarItem = UITabBarItem(title: "profile_title_bar".localized(), image: UIImage(systemName: "person.fill"), tag: 2)
+    
+    return profileVC
   }
   
   public static func navigateToDetail(viewController: UIViewController, movieId: Int) {

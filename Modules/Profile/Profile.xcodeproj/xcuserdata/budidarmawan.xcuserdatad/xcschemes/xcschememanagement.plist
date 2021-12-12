@@ -6,8 +6,23 @@
 	<dict>
 		<key>Profile.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>20</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DB35B5922765D35E00102BBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB35B59C2765D35F00102BBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

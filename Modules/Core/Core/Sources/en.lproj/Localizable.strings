@@ -17,12 +17,16 @@
 // MARK: Common String
 "home_title" = "Discover";
 "bookmark_title" = "Bookmark";
+"profile_title" = "Profile";
 "overview" = "Overview";
 "bookmark" = "Bookmark";
 "bookmarked" = "Bookmarked";
 "runtime" = "Runtime";
 "hours" = "Hours";
 "minutes" = "Minutes";
+"academy" = "Academy";
+"point" = "Points";
+"contact" = "Contact";
 
 
 // MARK: Message String

@@ -17,12 +17,16 @@
 // MARK: Common String
 "home_title" = "Daftar Film";
 "bookmark_title" = "Ditandai";
+"profile_title" = "Akun";
 "overview" = "Ringkasan";
 "bookmark" = "Tandai";
 "bookmarked" = "Ditandai";
 "runtime" = "Durasi";
 "hours" = "Jam";
 "minutes" = "Menit";
+"academy" = "Akademi";
+"point" = "Poin";
+"contact" = "Kontak";
 
 
 // MARK: Message String

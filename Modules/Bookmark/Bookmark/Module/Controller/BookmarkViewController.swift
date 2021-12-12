@@ -66,7 +66,7 @@ public class BookmarkViewController: UIViewController {
         if self.movies.isEmpty {
           let query = self.searchController.searchBar.text?.trimmingCharacters(in: .whitespaces)
           let image = query?.isEmpty == true ? "img_empty_items" : "img_error_search"
-          let message = query?.isEmpty == true ? "no_items".localized() : "\"\(query!)\"" + "not_found".localized()
+          let message = query?.isEmpty == true ? "no_items".localized() : "\"\(query!)\" " + "not_found".localized()
           self.moviesTableView.setBackground(imageName: image, messageImage: message)
         } else {
           self.moviesTableView.clearBackground()

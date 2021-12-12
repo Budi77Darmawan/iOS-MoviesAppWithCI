@@ -23,7 +23,8 @@ class TabBarController: UITabBarController {
   func makeTabBar() -> TabBarController {
     self.viewControllers = [
       makeNavigation(viewController: Router.makeHomeView()),
-      makeNavigation(viewController: Router.makeBookmarkView())
+      makeNavigation(viewController: Router.makeBookmarkView()),
+      makeNavigation(viewController: Router.makeProfileView())
     ]
     return self
   }

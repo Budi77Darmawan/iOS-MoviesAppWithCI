@@ -14,6 +14,8 @@
 		DB49476B27659525009EF71A /* SharedView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB49476A27659525009EF71A /* SharedView.framework */; };
 		DB49476C27659525009EF71A /* SharedView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB49476A27659525009EF71A /* SharedView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB582B2E27646357005771C9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB582B2D27646357005771C9 /* Router.swift */; };
+		DBA292382765D9C1005877E3 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA292372765D9C1005877E3 /* Profile.framework */; };
+		DBA292392765D9C1005877E3 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA292372765D9C1005877E3 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBA865C1275C637500E5ADBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C0275C637500E5ADBB /* AppDelegate.swift */; };
 		DBA865C3275C637500E5ADBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C2275C637500E5ADBB /* SceneDelegate.swift */; };
 		DBA865C5275C637600E5ADBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA865C4275C637500E5ADBB /* TabBarController.swift */; };
@@ -48,6 +50,7 @@
 				DB35B5862765A20C00102BBF /* Bookmark.framework in Embed Frameworks */,
 				DBA8670A275D131D00E5ADBB /* Core.framework in Embed Frameworks */,
 				DBA86719275D1C4400E5ADBB /* Home.framework in Embed Frameworks */,
+				DBA292392765D9C1005877E3 /* Profile.framework in Embed Frameworks */,
 				DB49476C27659525009EF71A /* SharedView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -64,6 +67,7 @@
 		DB35B5842765A20C00102BBF /* Bookmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bookmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB49476A27659525009EF71A /* SharedView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SharedView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB582B2D27646357005771C9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DBA292372765D9C1005877E3 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA865BD275C637500E5ADBB /* MoviesAppWithCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesAppWithCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA865C0275C637500E5ADBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA865C2275C637500E5ADBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA292382765D9C1005877E3 /* Profile.framework in Frameworks */,
 				DB35B5852765A20C00102BBF /* Bookmark.framework in Frameworks */,
 				980B900AD3579EAAA5F4720A /* Pods_MoviesAppWithCI.framework in Frameworks */,
 				DBA86709275D131D00E5ADBB /* Core.framework in Frameworks */,
@@ -105,6 +110,7 @@
 		C63369C2473289B6C7C0ACC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBA292372765D9C1005877E3 /* Profile.framework */,
 				DB35B5842765A20C00102BBF /* Bookmark.framework */,
 				DB49476A27659525009EF71A /* SharedView.framework */,
 				DBA86717275D1C4400E5ADBB /* Home.framework */,
