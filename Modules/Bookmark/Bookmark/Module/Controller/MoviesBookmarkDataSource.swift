@@ -21,13 +21,19 @@ public class MoviesBookmarkDataSource: LocaleDataSource {
     _realm = realm
   }
   
-  public func getBookmarkMovies() -> Observable<Results<ObjMovie>> {
+  public func getBookmarkMovies(query: String?) -> Observable<Results<ObjMovie>> {
     return Observable<Results<ObjMovie>>.create { observer in
         do {
           try self._realm.write {
+            
             let list = self._realm.objects(ObjMovie.self)
               .sorted(byKeyPath: "title", ascending: true)
-            observer.onNext(list)
+            if query?.isEmpty == true {
+              observer.onNext(list)
+            } else {
+              let filterList = list.filter("title contains[c] %@", query ?? "")
+              observer.onNext(filterList)
+            }
             observer.onCompleted()
           }
         } catch {
@@ -90,4 +96,3 @@ public class MoviesBookmarkDataSource: LocaleDataSource {
     }
   }
 }
-

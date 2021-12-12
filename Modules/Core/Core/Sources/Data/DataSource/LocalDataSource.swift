@@ -11,7 +11,7 @@ public protocol LocaleDataSource {
   associatedtype Request
   associatedtype Response
   
-  func getBookmarkMovies() -> Observable<Response>
+  func getBookmarkMovies(query: String?) -> Observable<Response>
   func getMovie(id: Request) -> Observable<Response>
   func addToLocal(entities: ObjMovie) -> Observable<Bool?>
   func deleteFromLocal(id: Request) -> Observable<Bool?>

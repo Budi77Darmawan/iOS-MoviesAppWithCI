@@ -28,7 +28,7 @@ MoviesLocaleDataSource.Response == Results<ObjMovie> {
   }
   
   public func execute(request: String?) -> Observable<[MovieModel]?> {
-    return self._localeDataSource.getBookmarkMovies()
+    return self._localeDataSource.getBookmarkMovies(query: request)
       .map { DataMapper.mapListObjMovieToListMovie(list: $0) }
   }
 }

@@ -21,7 +21,7 @@ public class MoviesLocaleDataSource: LocaleDataSource {
     _realm = realm
   }
   
-  public func getBookmarkMovies() -> Observable<Results<ObjMovie>> {
+  public func getBookmarkMovies(query: String?) -> Observable<Results<ObjMovie>> {
     return Observable<Results<ObjMovie>>.create { observer in
         do {
           try self._realm.write {
