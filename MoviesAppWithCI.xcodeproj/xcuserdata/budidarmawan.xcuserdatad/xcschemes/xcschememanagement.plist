@@ -9,7 +9,20 @@
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>16</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DB09D6682762C59B00133A57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA865BC275C637500E5ADBB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

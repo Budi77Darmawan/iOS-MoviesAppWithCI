@@ -40,3 +40,11 @@ target 'Home' do
   pod 'RealmSwift'
 end
 
+target 'Bookmark' do
+  project './Modules/Bookmark/Bookmark'
+  pod 'CommonExt'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RealmSwift'
+end
+

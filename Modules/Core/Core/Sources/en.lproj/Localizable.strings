@@ -16,6 +16,7 @@
 
 // MARK: Common String
 "home_title" = "Discover";
+"bookmark_title" = "Bookmark";
 "overview" = "Overview";
 "bookmark" = "Bookmark";
 "bookmarked" = "Bookmarked";
@@ -23,3 +24,7 @@
 "hours" = "Hours";
 "minutes" = "Minutes";
 
+
+// MARK: Message String
+"not_found" = "not found";
+"no_items" = "No items";

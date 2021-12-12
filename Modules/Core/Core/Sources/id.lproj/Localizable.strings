@@ -16,6 +16,7 @@
 
 // MARK: Common String
 "home_title" = "Daftar Film";
+"bookmark_title" = "Ditandai";
 "overview" = "Ringkasan";
 "bookmark" = "Tandai";
 "bookmarked" = "Ditandai";
@@ -23,3 +24,7 @@
 "hours" = "Jam";
 "minutes" = "Menit";
 
+
+// MARK: Message String
+"not_found" = "tidak ditemukan";
+"no_items" = "Tidak ada items";

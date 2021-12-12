@@ -75,13 +75,13 @@ public class DetailViewController: UIViewController {
   
   private func setupButtonBookmark(isBookmark: Bool) {
     if isBookmark {
-      bookmarkButton.setTitle("Bookmarked".localized(), for: .normal)
+      bookmarkButton.setTitle("bookmarked".localized(), for: .normal)
       bookmarkButton.setTitleColor(.white, for: .normal)
       bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
       bookmarkButton.tintColor = .white
       bookmarkButton.backgroundColor = .systemBlue
     } else {
-      bookmarkButton.setTitle("Bookmark".localized(), for: .normal)
+      bookmarkButton.setTitle("bookmark".localized(), for: .normal)
       bookmarkButton.setTitleColor(.systemBlue, for: .normal)
       bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
       bookmarkButton.tintColor = .systemBlue

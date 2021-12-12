@@ -9,6 +9,7 @@ import UIKit
 import RealmSwift
 import Core
 import Home
+import Bookmark
 
 final class Injection: NSObject {
   
@@ -30,6 +31,13 @@ final class Injection: NSObject {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let locale = MoviesLocaleDataSource(realm: appDelegate.realm)
     let repository = UpdateBookmarkMovieRepository(localeDataSource: locale)
+    return Interactor(repository: repository) as! U
+  }
+  
+  func provideMovieBookmark<U: UseCase>() -> U where U.Request == String, U.Response == [MovieModel] {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let locale = MoviesBookmarkDataSource(realm: appDelegate.realm)
+    let repository = GetMoviesBookmarkRepository(localeDataSource: locale)
     return Interactor(repository: repository) as! U
   }
 }

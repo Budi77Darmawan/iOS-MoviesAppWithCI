@@ -191,7 +191,7 @@
 		DBB9E820275EC623005B0CF6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DBB9E823275EC653005B0CF6 /* Local */,
+				DBB9E823275EC653005B0CF6 /* Locale */,
 				DBB9E822275EC636005B0CF6 /* Remote */,
 				DBB9E821275EC62F005B0CF6 /* Repository */,
 			);
@@ -217,12 +217,12 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		DBB9E823275EC653005B0CF6 /* Local */ = {
+		DBB9E823275EC653005B0CF6 /* Locale */ = {
 			isa = PBXGroup;
 			children = (
 				DBB9E82F275ECC66005B0CF6 /* MoviesLocaleDataSource.swift */,
 			);
-			path = Local;
+			path = Locale;
 			sourceTree = "<group>";
 		};
 		F108BBEB2DE300BB2D916062 /* Pods */ = {

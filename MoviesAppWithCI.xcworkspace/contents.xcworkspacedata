@@ -11,9 +11,12 @@
       location = "group:Modules/Home/Home.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Modules/Bookmark/Bookmark.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Modules/SharedView/SharedView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
