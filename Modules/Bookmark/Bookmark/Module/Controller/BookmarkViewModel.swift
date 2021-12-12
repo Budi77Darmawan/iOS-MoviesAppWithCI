@@ -15,11 +15,11 @@ where
 MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
   private let disposeBag = DisposeBag()
   private let _moviesUseCase: MoviesUseCase
-  private var _navigateToDetail: ((UIViewController, Int) -> ())?
+  private var _navigateToDetail: ((UIViewController, Int) -> Void)?
   
   let result = PublishSubject<[MovieModel]>()
   
-  public init(useCase: MoviesUseCase, navigateToDetail: @escaping ((UIViewController, Int) -> ())) {
+  public init(useCase: MoviesUseCase, navigateToDetail: @escaping ((UIViewController, Int) -> Void)) {
     self._moviesUseCase = useCase
     self._navigateToDetail = navigateToDetail
   }

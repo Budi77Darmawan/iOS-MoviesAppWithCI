@@ -25,11 +25,11 @@ public class HomeViewController: UIViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
     initTableView()
-    viewModel?.getMovies()
+    viewModel?.getMovies(nil)
     
     viewModel?.result
       .subscribe( onNext: { res in
-        self.movies.append(contentsOf: res)
+        self.movies = res
         if self.movies.isEmpty {
           self.moviesTableView.setBackground(imageName: "img_empty_items", messageImage: "No items")
           return
@@ -56,8 +56,7 @@ public class HomeViewController: UIViewController {
   
   @objc
   private func refreshTableView() {
-    self.movies.removeAll()
-    self.viewModel?.getMovies()
+    self.viewModel?.refreshMovies()
   }
 
 }
@@ -72,7 +71,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
       return UITableViewCell()
     }
-    cell.configureCell(with: movies[indexPath.row])
+    let movie = movies[indexPath.row]
+    cell.configureCell(with: movie)
+    self.viewModel?.getMovies(movie)
     return cell
   }
   

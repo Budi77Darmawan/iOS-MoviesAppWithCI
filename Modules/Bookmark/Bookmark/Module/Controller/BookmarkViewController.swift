@@ -23,8 +23,10 @@ public class BookmarkViewController: UIViewController {
   
   private let disposeBag = DisposeBag()
   private var movies: [MovieModel] = []
+  private var navigateUp = false
   
   public override func viewWillAppear(_ animated: Bool) {
+    navigateUp = false
     let query = searchController.searchBar.text?.trimmingCharacters(in: .whitespaces)
     viewModel?.getMovies(query: query)
   }
@@ -51,9 +53,11 @@ public class BookmarkViewController: UIViewController {
       .rx.text
       .debounce(.milliseconds(600), scheduler: MainScheduler.instance)
       .subscribe(onNext: { query in
-        guard let querySearch = query else { return }
-        let queryTrim = querySearch.trimmingCharacters(in: .whitespaces)
-        self.viewModel?.getMovies(query: queryTrim)
+        if !self.navigateUp {
+          guard let querySearch = query else { return }
+          let queryTrim = querySearch.trimmingCharacters(in: .whitespaces)
+          self.viewModel?.getMovies(query: queryTrim)
+        }
       })
       .disposed(by: disposeBag)
   }
@@ -95,6 +99,7 @@ extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    navigateUp = true
     let movieId = movies[indexPath.row].id
     viewModel?.navigateToDetail(viewController: self, movieId: movieId)
   }

@@ -7,6 +7,7 @@
 
 import Core
 import RxSwift
+import Alamofire
 
 public struct GetMoviesRemoteDataSource : RemoteDataSource {
     
@@ -22,7 +23,8 @@ public struct GetMoviesRemoteDataSource : RemoteDataSource {
     public func execute(request: Request?) -> Observable<Response?> {
       let api = _endpoint
       let url = URL(string: _endpoint.url)
-      let data: Observable<Response?> = NetworkCall().executeQuery(url: url, method: api.method, params: api.params(parameters: nil))
+      let params: Parameters = ["page": request ?? "1"]
+      let data: Observable<Response?> = NetworkCall().executeQuery(url: url, method: api.method, params: api.params(parameters: params))
       return data
     }
 
