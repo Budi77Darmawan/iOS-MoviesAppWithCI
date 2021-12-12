@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */; };
-		DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */; };
+		DB49476E27659530009EF71A /* SharedView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB49476D27659530009EF71A /* SharedView.framework */; };
+		DB49476F27659530009EF71A /* SharedView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB49476D27659530009EF71A /* SharedView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB58B70227649E1100B33F35 /* GetMovieRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B70127649E1100B33F35 /* GetMovieRemoteDataSource.swift */; };
 		DB58B70427649E9600B33F35 /* GetMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B70327649E9600B33F35 /* GetMovieRepository.swift */; };
 		DB58B7062764A01900B33F35 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB58B7052764A01900B33F35 /* DetailViewModel.swift */; };
@@ -39,12 +39,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DB49477027659530009EF71A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DB49476F27659530009EF71A /* SharedView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04F03375B18FC7002F722230 /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		29822CB91C55E3FDE5AE4259 /* Pods-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Home/Pods-Home.release.xcconfig"; sourceTree = "<group>"; };
 		61D3490C14A26FBF61BB38D2 /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		DB49476D27659530009EF71A /* SharedView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SharedView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB58B70127649E1100B33F35 /* GetMovieRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieRemoteDataSource.swift; sourceTree = "<group>"; };
 		DB58B70327649E9600B33F35 /* GetMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieRepository.swift; sourceTree = "<group>"; };
 		DB58B7052764A01900B33F35 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +86,7 @@
 			files = (
 				E27579B9C4E1DC241BD7981A /* Pods_Home.framework in Frameworks */,
 				DBB9E82A275EC905005B0CF6 /* Core.framework in Frameworks */,
+				DB49476E27659530009EF71A /* SharedView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,7 @@
 		AC19400FBE125B591FF18A1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB49476D27659530009EF71A /* SharedView.framework */,
 				DBB9E829275EC905005B0CF6 /* Core.framework */,
 				DBA866C1275CDFA700E5ADBB /* CommonExt.framework */,
 				61D3490C14A26FBF61BB38D2 /* Pods_Home.framework */,
@@ -159,8 +174,6 @@
 				DBA866AF275CCC8400E5ADBB /* HomeViewController.swift */,
 				DBA866B0275CCC8400E5ADBB /* HomeViewController.xib */,
 				DB5AC91F276046CD004A5589 /* HomeViewModel.swift */,
-				DB09D65A2762BEDC00133A57 /* MovieTableViewCell.swift */,
-				DB09D65B2762BEDC00133A57 /* MovieTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -245,6 +258,7 @@
 				DBA86690275CCC7100E5ADBB /* Sources */,
 				DBA86691275CCC7100E5ADBB /* Frameworks */,
 				DBA86692275CCC7100E5ADBB /* Resources */,
+				DB49477027659530009EF71A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,7 +331,6 @@
 			files = (
 				DBA86720275D68FD00E5ADBB /* DetailViewController.xib in Resources */,
 				DBA866B2275CCC8400E5ADBB /* HomeViewController.xib in Resources */,
-				DB09D65D2762BEDC00133A57 /* MovieTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +382,6 @@
 				DB58B70227649E1100B33F35 /* GetMovieRemoteDataSource.swift in Sources */,
 				DB58B7062764A01900B33F35 /* DetailViewModel.swift in Sources */,
 				DB58B70427649E9600B33F35 /* GetMovieRepository.swift in Sources */,
-				DB09D65C2762BEDC00133A57 /* MovieTableViewCell.swift in Sources */,
 				DBB9E82E275ECBAA005B0CF6 /* GetMoviesRepository.swift in Sources */,
 				DB58B70B2764F8D700B33F35 /* UpdateBookmarkMovieRepository.swift in Sources */,
 			);

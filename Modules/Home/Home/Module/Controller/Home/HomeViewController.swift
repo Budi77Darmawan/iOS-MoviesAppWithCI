@@ -9,6 +9,7 @@ import UIKit
 import CommonExt
 import Core
 import RxSwift
+import SharedView
 
 public class HomeViewController: UIViewController {
   

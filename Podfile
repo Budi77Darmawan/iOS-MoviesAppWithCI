@@ -20,6 +20,10 @@ target 'MoviesAppWithCI' do
   
 end
 
+target 'SharedView' do
+  project './Modules/SharedView/SharedView'
+end
+
 target 'Core' do
   project './Modules/Core/Core'
   pod 'Alamofire', '~> 5.2'
