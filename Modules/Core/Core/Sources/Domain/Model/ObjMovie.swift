@@ -22,7 +22,7 @@ public class ObjMovie: Object {
   @objc dynamic var voteCount: Int = 0
   @objc dynamic var isBookmark: Bool = false
   
-  var genres: List<ObjGenre> = List()
+  public var genres: List<ObjGenre> = List()
   var productionCompanies: List<ObjProductionCompany> = List()
   var productionCountries: List<ObjProductionCountry> = List()
   

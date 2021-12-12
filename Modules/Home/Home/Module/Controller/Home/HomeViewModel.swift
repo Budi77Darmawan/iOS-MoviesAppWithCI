@@ -17,8 +17,6 @@ MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
   private let _moviesUseCase: MoviesUseCase
   private var _navigateToDetail: ((UIViewController, Int) -> ())?
   
-  typealias Router = HomeRouter
-  
   let result = PublishSubject<[MovieModel]>()
   
   public init(useCase: MoviesUseCase, navigateToDetail: @escaping ((UIViewController, Int) -> ())) {
@@ -39,7 +37,6 @@ MoviesUseCase.Request == String, MoviesUseCase.Response == [MovieModel] {
   }
   
   func navigateToDetail(viewController: UIViewController, movieId: Int) {
-//    Router.navigateToDetailView(viewController: viewController)
     _navigateToDetail?(viewController, movieId)
   }
 }

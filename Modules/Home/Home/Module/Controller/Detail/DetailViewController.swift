@@ -13,7 +13,8 @@ import RxSwift
 public class DetailViewController: UIViewController {
   
   public var viewModel: DetailViewModel<
-    Interactor<String, MovieModel, GetMovieRepository<GetMovieRemoteDataSource>>
+    Interactor<String, MovieModel, GetMovieRepository<GetMovieRemoteDataSource, MoviesLocaleDataSource>>,
+    Interactor<MovieModel, Bool, UpdateBookmarkMovieRepository<MoviesLocaleDataSource>>
   >?
   
   private let disposeBag = DisposeBag()
@@ -39,13 +40,17 @@ public class DetailViewController: UIViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
-    viewModel?.getMovie()
     overviewStaticLabel.text = "overview".localized()
     
+    initObservers()
+    viewModel?.getMovie()
+  }
+  
+  private func initObservers() {
     viewModel?.result
-      .subscribe( onNext: { res in
-        guard let movie = res else { return }
+      .subscribe( onNext: { movie in
         self.setupView(with: movie)
+        self.setupButtonBookmark(isBookmark: movie.isBookmark)
       }, onError: { _ in
       })
       .disposed(by: disposeBag)
@@ -60,12 +65,12 @@ public class DetailViewController: UIViewController {
     genreLabel.text = DataMapper.mapListToString(from: movie.genres ?? [])
     overviewLabel.text = movie.overview
     runtimeLabel.text = "runtime".localized() + ": \(DataMapper.mapMinutesToHoursMinutes(from: movie.runtime ?? 0))"
-    bookmarkButton.addTarget(self, action: #selector(updateBookmarksMovie), for: .touchUpInside)
+    bookmarkButton.addTarget(self, action: #selector(updatesBookmarkMovie), for: .touchUpInside)
   }
   
   @objc
-  private func updateBookmarksMovie() {
-//    viewModel?.updateBookmarksMovie()
+  private func updatesBookmarkMovie() {
+    viewModel?.updatesBookmarkMovie()
   }
   
   private func setupButtonBookmark(isBookmark: Bool) {

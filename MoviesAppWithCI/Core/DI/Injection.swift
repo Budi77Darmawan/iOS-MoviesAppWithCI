@@ -11,6 +11,7 @@ import Core
 import Home
 
 final class Injection: NSObject {
+  
   func provideMovies<U: UseCase>() -> U where U.Request == String, U.Response == [MovieModel] {
     let remote = GetMoviesRemoteDataSource(endpoint: Endpoints.Movie.popular)
     let repository = GetMoviesRepository(remoteDataSource: remote)
@@ -18,8 +19,17 @@ final class Injection: NSObject {
   }
   
   func provideMovie<U: UseCase>(movieId: Int) -> U where U.Request == String, U.Response == MovieModel {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let locale = MoviesLocaleDataSource(realm: appDelegate.realm)
     let remote = GetMovieRemoteDataSource(endpoint: Endpoints.Movie.detail(movieId: movieId))
-    let repository = GetMovieRepository(remoteDataSource: remote)
+    let repository = GetMovieRepository(remoteDataSource: remote, localeDataSource: locale)
+    return Interactor(repository: repository) as! U
+  }
+  
+  func provideMovieLocale<U: UseCase>() -> U where U.Request == MovieModel, U.Response == Bool {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let locale = MoviesLocaleDataSource(realm: appDelegate.realm)
+    let repository = UpdateBookmarkMovieRepository(localeDataSource: locale)
     return Interactor(repository: repository) as! U
   }
 }

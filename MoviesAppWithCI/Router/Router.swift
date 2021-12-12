@@ -11,6 +11,7 @@ import Core
 
 public class Router {
   static let bundleHome = "com.bd-drmwan.Home"
+  private static let injection = Injection.init()
   
   public static func makeHomeView() -> UIViewController {
     let homeVC = HomeViewController(
@@ -21,11 +22,11 @@ public class Router {
     homeVC.tabBarItem = UITabBarItem(title: "home_title_bar".localized(), image: UIImage(systemName: "play.fill"), tag: 0)
     
     let useCase: Interactor<
-        String,
-        [MovieModel],
-        GetMoviesRepository<
-            GetMoviesRemoteDataSource>
-    > = Injection.init().provideMovies()
+      String,
+      [MovieModel],
+      GetMoviesRepository<
+        GetMoviesRemoteDataSource>
+    > = injection.provideMovies()
     
     homeVC.viewModel = HomeViewModel(useCase: useCase) { viewContoller, movieId in
       navigateToDetail(viewController: viewContoller, movieId: movieId)
@@ -40,14 +41,22 @@ public class Router {
       bundle: Bundle(identifier: bundleHome)
     )
     
-    let useCase: Interactor<
-        String,
-        MovieModel,
-        GetMovieRepository<
-            GetMovieRemoteDataSource>
-    > = Injection.init().provideMovie(movieId: movieId)
+    let movieUseCase: Interactor<
+      String,
+      MovieModel,
+      GetMovieRepository<
+        GetMovieRemoteDataSource,
+        MoviesLocaleDataSource>
+    > = injection.provideMovie(movieId: movieId)
     
-    detailVC.viewModel = DetailViewModel(useCase: useCase)
+    let movieLocaleUseCase: Interactor<
+      MovieModel,
+      Bool,
+      UpdateBookmarkMovieRepository<
+        MoviesLocaleDataSource>
+    > = injection.provideMovieLocale()
+    
+    detailVC.viewModel = DetailViewModel(movieId: movieId, movieUseCase: movieUseCase, moviesLocaleUseCase: movieLocaleUseCase)
     
     viewController.navigationController?.pushViewController(detailVC, animated: true)
   }

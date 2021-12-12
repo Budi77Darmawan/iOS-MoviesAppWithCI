@@ -28,7 +28,9 @@ public final class DataMapper {
   public static func mapMinutesToHoursMinutes (from minute : Int) -> String {
     let hours = minute / 60
     let minutes = minute % 60
-    return "\(hours)h \(minutes)m"
+    let strHours = "hours".localized()
+    let strMinutes = "minutes".localized()
+    return "\(hours)\(strHours) \(minutes)\(strMinutes)"
   }
   
   public static func mapMovieModelToObjMovie(data: MovieModel) -> ObjMovie {
@@ -59,7 +61,7 @@ public final class DataMapper {
   }
   
   public static func mapListObjMovieToListMovie(list: Results<ObjMovie>) -> [MovieModel] {
-    return list.map {
+    return list.toArray(ofType: ObjMovie.self).map {
       mapObjMovieToMovieModel(data: $0)
     }
   }
@@ -68,4 +70,18 @@ public final class DataMapper {
     let genres: [Genre] = data.genres.map { gen in Genre(id: gen.id, name: gen.name) }
     return MovieModel(adult: data.adult, backdropPath: data.backdropPath, genres: genres, id: data.id, overview: data.overview, popularity: data.popularity, posterPath: data.posterPath, releaseDate: data.releaseDate, runtime: data.runtime, title: data.title, voteAverage: data.voteAverage, voteCount: data.voteCount, isBookmark: data.isBookmark)
   }
+}
+
+extension Results {
+
+  public func toArray<T>(ofType: T.Type) -> [T] {
+    var array = [T]()
+    for index in 0 ..< count {
+      if let result = self[index] as? T {
+        array.append(result)
+      }
+    }
+    return array
+  }
+
 }
